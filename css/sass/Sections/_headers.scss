@@ -1,0 +1,69 @@
+.sec-headers {
+    color: $fff;
+
+    &::before {
+        content: url(../images/border.svg);
+        margin-bottom: 15px;
+        display: block;
+    }
+}
+
+.lighttext {
+    font-size: 36px;
+    margin-bottom: 5px;
+
+    @include sm {
+        font-size: 30px;
+    }
+}
+
+.boldtext {
+    font-size: 36px;
+    font-family: black;
+
+    @include sm {
+        font-size: 30px;
+    }
+}
+
+.regtext {
+    font-size: 18px;
+    color: $text;
+    width: 540px;
+    margin: auto;
+    margin-top: 10px;
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.howdoit,
+.services-sec,
+.projects-sec,
+.blogs-sec {
+    .sec-headers {
+        text-align: center;
+    }
+}
+
+.about-sec {
+    .sec-headers {
+        &::before {
+            transform: translateX(-25px);
+            display: block;
+
+            @include sm {
+                transform: none;
+            }
+
+            #{$rtl} & {
+                transform: translate(25px);
+
+                @include sm {
+                    transform: none;
+                }
+            }
+        }
+    }
+}

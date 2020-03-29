@@ -1,0 +1,77 @@
+.project {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    .proj-img {
+        width: 40%;
+        border-radius: 2px 8px 8px 8px;
+        overflow: hidden;
+        display: block;
+
+        @include sm {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transition(all 0.3s ease-in-out);
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .proj-desc {
+        width: 60%;
+        padding: 0 50px;
+
+        @include sm {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .poject-name {
+        font-family: xbold;
+        color: $fff;
+        font-size: 24px;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        display: inline-block;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    .poject-info {
+        font-size: 20px;
+        color: #9fa5f2;
+        margin-bottom: 35px;
+    }
+
+    .view-head {
+        font-family: bold;
+        display: inline-block;
+        font-size: 18px;
+        color: $fff;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}

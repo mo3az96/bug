@@ -1,0 +1,155 @@
+.loader {
+    background: $back;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+    z-index: 99999999;
+
+
+    svg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+
+    }
+
+    .stroke-still {
+        stroke: $baby;
+    }
+
+    .stroke-animation {
+        -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+        animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-delay: 0;
+        animation-delay: 0;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+    }
+}
+
+
+
+@-webkit-keyframes stroke-spacing {
+    0% {
+        stroke-dasharray: 0 200;
+    }
+
+    45% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200 200;
+    }
+
+    90% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+
+    100% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+}
+
+@keyframes stroke-spacing {
+    0% {
+        stroke-dasharray: 0 200;
+    }
+
+    45% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200 200;
+    }
+
+    90% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+
+    100% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+}
+
+@-webkit-keyframes stroke-color {
+    0% {
+        stroke: #69e9f2;
+    }
+
+    24% {
+        stroke: #ffa705;
+    }
+
+    25% {
+        stroke: #3224e9;
+    }
+
+    49% {
+        stroke: #3224e9;
+    }
+
+    50% {
+        stroke: #69e9f2;
+    }
+
+    74% {
+        stroke: #69e9f2;
+    }
+
+    75% {
+        stroke: $orange;
+    }
+
+    99% {
+        stroke: $orange;
+    }
+}
+
+@keyframes stroke-color {
+    0% {
+        stroke: #69e9f2;
+    }
+
+    24% {
+        stroke: #ffa705;
+    }
+
+    25% {
+        stroke: #3224e9;
+    }
+
+    49% {
+        stroke: #3224e9;
+    }
+
+    50% {
+        stroke: #69e9f2;
+    }
+
+    74% {
+        stroke: #69e9f2;
+    }
+
+    75% {
+        stroke: $orange;
+    }
+
+    99% {
+        stroke: $orange;
+    }
+}

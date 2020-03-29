@@ -1,0 +1,217 @@
+.menubtn {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    background-color: $baby;
+    z-index: 999;
+    border-radius: 4px;
+
+    &.open {
+        span {
+            background-color: $fff;
+
+            &:nth-child(1) {
+                top: 8px;
+                -webkit-transform: rotate(135deg);
+                -moz-transform: rotate(135deg);
+                -o-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            &:nth-child(2) {
+                visibility: hidden;
+                transform: translateX(60px);
+
+                #{$rtl} & {
+                    transform: translateX(-60px);
+                }
+            }
+
+            &:nth-child(3) {
+                top: -8px;
+                -webkit-transform: rotate(-135deg);
+                -moz-transform: rotate(-135deg);
+                -o-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+        }
+
+        &:hover {
+            span {
+                background-color: $orange;
+            }
+        }
+    }
+
+    @include sm {
+        display: flex;
+    }
+
+    span {
+        width: 25px;
+        height: 2px;
+        background-color: $fff;
+        display: flex;
+        @include transition(all 0.3s ease-in-out);
+        position: relative;
+
+        &.med {
+            margin: 6px 0;
+        }
+    }
+
+    &:hover {
+
+        span {
+            background-color: $orange;
+        }
+    }
+}
+
+.header {
+    @include sm {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    display: none;
+
+    nav {
+        flex-direction: column;
+        margin: 0;
+        background-color: #050b55;
+        width: 300px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transform-origin: left;
+        transform: scaleX(0);
+        @include transition(all 0.5s ease-in-out);
+
+        &.open {
+            transform: scaleX(1);
+        }
+    }
+
+    .nav-ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .nav-li {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $fff;
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    .navlink {
+        font-size: 20px;
+    }
+
+    .nav-foot {
+        margin-top: 25px;
+        flex-direction: column;
+        display: flex;
+        padding: 0 15px;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: $links;
+        margin-top: 25px;
+
+        h5 {
+            margin-right: 10px;
+
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .social-ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-link {
+        font-size: 15px;
+        color: $links;
+        margin: 0 10px;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    .contact-link {
+        font-size: 15px;
+        color: $links;
+        @include transition(all 0.3s ease-in-out);
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+
+        span {
+            margin-right: 2px;
+
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: 5px;
+            }
+        }
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    .nav-head {
+        padding: 10px 25px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            width: 40px;
+            display: block;
+        }
+
+        .menubtn {
+            background-color: transparent;
+        }
+    }
+}

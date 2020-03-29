@@ -1,0 +1,127 @@
+header {
+    background-color: $back;
+
+
+    @include sm {
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+        padding: 10px 0;
+
+    }
+
+    .header {
+        display: flex;
+    }
+
+    .logo {
+        min-width: 68px;
+        display: block;
+        margin-right: 40px;
+        width: 68px;
+        margin-top: 12px;
+
+        #{$rtl} & {
+            margin-right: 0;
+            margin-left: 40px;
+        }
+
+        @include sm {
+            margin: 0;
+            width: 40px;
+            min-width: 40px;
+        }
+    }
+
+    .sec-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .top-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $border;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: $links;
+
+        h5 {
+            margin-right: 10px;
+
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .social-ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-link {
+        font-size: 16px;
+        color: $links;
+        margin: 0 10px;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .contact-link {
+        font-size: 16px;
+        color: $links;
+        @include transition(all 0.3s ease-in-out);
+        height: 52px;
+        display: flex;
+        align-items: center;
+        border-right: 1px solid $border;
+        padding: 0 25px;
+
+        #{$rtl} & {
+            border: none;
+            border-left: 1px solid $border;
+        }
+
+        span {
+            margin-right: 5px;
+
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: 5px;
+            }
+        }
+
+        &:hover {
+            color: $orange;
+        }
+
+        &:last-of-type {
+            padding-right: 0;
+            border: none;
+
+            #{$rtl} & {
+                padding-right: 25px;
+                padding-left: 0;
+            }
+        }
+    }
+}

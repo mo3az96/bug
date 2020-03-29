@@ -1,0 +1,465 @@
+.shape {
+    position: absolute;
+    z-index: -1;
+    transform: scale(0.4);
+}
+
+.main-sec {
+    padding-top: 60px;
+    position: relative;
+    padding-bottom: 240px;
+    background-color: $back;
+
+    @include sm {
+        padding: 40px 0;
+        background-color: $back;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -9vw;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-image: url(../images/mountain_header.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .shape {
+        top: 25%;
+        right: 10%;
+
+        &:nth-of-type(2) {
+            top: 50%;
+            right: 50%;
+        }
+
+        &:nth-of-type(3) {
+            top: 30%;
+            right: 95%;
+        }
+
+        &:nth-of-type(5) {
+            top: 40%;
+            right: 20%;
+        }
+
+        &:nth-of-type(4) {
+            top: 60%;
+            right: 70%;
+        }
+    }
+}
+
+.first-sec {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        flex-direction: column;
+    }
+}
+
+.text-div {
+    width: 50%;
+    color: #fff;
+
+    @include sm {
+        width: 100%;
+        order: 2;
+    }
+}
+
+.main-text {
+    font-size: 48px;
+    font-family: black;
+    text-transform: capitalize;
+    line-height: 1.15;
+    margin-bottom: 20px;
+
+    @include sm {
+        font-size: 28px;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+.sec-text {
+    font-size: 20px;
+    line-height: 1.4;
+    color: $text;
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-all;
+
+    @include sm {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+.image-div {
+    width: 50%;
+
+    @include sm {
+        width: 100%;
+        order: 1;
+    }
+
+    img {
+        margin-left: auto;
+        width: 90%;
+
+        @include sm {
+            margin: auto;
+        }
+
+        #{$rtl} & {
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+.btns {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    @include sm {
+        flex-direction: column;
+
+        .start-btn {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.play-video-cont {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: xbold;
+    margin-left: 32px;
+
+    @include sm {
+        margin: 0;
+    }
+
+    #{$rtl} & {
+        margin-left: 0;
+        margin-right: 32px;
+
+        @include sm {
+            margin: 0;
+        }
+    }
+
+    span {
+        color: $fff;
+        @include transition(all 0.3s ease-in-out);
+        margin: 0 12px;
+    }
+
+    &:hover {
+        span {
+            color: $orange;
+        }
+
+        .btn-hover {
+            span {
+                color: $fff;
+            }
+
+            &::after,
+            &::before {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
+
+.howdoit-sec {
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url(../images/line.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        right: 0;
+        height: 100%;
+
+        @include sm {
+            display: none;
+        }
+    }
+}
+
+.howdoit {
+    margin-top: 60px;
+
+    .items {
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            flex-direction: column;
+            transform: none !important;
+            margin-top: 30px;
+        }
+    }
+
+    .item {
+        width: 25%;
+        padding: 15px 25px;
+        position: absolute;
+
+        @include sm {
+            margin: auto;
+            margin-bottom: 20px;
+            width: auto;
+            position: relative;
+            transform: none;
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+            top: 0 !important;
+
+            @include sm {
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auro !important;
+            }
+        }
+
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+            top: 100px !important;
+
+            @include sm {
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auro !important;
+            }
+        }
+
+        &:nth-of-type(1) {
+            left: 0 !important;
+
+            @include sm {
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auro !important;
+            }
+        }
+
+        &:nth-of-type(2) {
+            left: 25% !important;
+
+            @include sm {
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auro !important;
+            }
+        }
+
+        &:nth-of-type(3) {
+            left: 50% !important;
+
+            @include sm {
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auro !important;
+            }
+        }
+
+        &:nth-of-type(4) {
+            left: 75% !important;
+
+            @include sm {
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auro !important;
+            }
+        }
+
+    }
+
+    .num {
+        font-size: 89px;
+        font-family: xbold;
+        color: $line;
+        z-index: -1;
+        position: absolute;
+        top: -30px;
+        right: 20px;
+    }
+
+    .item-clip {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        background-color: $blue;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 240px;
+        width: 214px;
+        margin: auto;
+    }
+
+    .item-name {
+        font-family: bold;
+        color: $fff;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+
+
+.about-sec {
+    margin-top: 150px;
+    position: relative;
+
+    @include sm {
+        margin-top: 60px;
+    }
+
+    .shape {
+        right: 5%;
+        top: -25%;
+
+        @include md {
+            right: -15%;
+        }
+
+        @include sm {
+            top: -25%;
+            right: 30%;
+        }
+    }
+
+    .image-div {
+        img {
+            margin-right: auto;
+            margin-left: 0;
+
+            @include sm {
+                margin: auto;
+            }
+
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+    }
+
+    .text-div {
+        overflow: hidden;
+
+        @include sm {
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+
+    .sec-text {
+        font-size: 18px;
+        line-height: 1.667;
+        color: $text;
+        text-align: unset;
+        hyphens: unset;
+        word-break: unset;
+        margin: 5px 0 40px;
+    }
+}
+
+.services-sec {
+    margin-top: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $back;
+
+    .services {
+        margin-top: 50px;
+    }
+}
+
+.projects-sec {
+    padding-top: 100px;
+    position: relative;
+
+    .shape {
+        top: 5%;
+        right: 10%;
+
+        &:nth-of-type(2) {
+            top: 75%;
+            right: 90%;
+        }
+    }
+}
+
+.radios {
+    margin-top: 50px;
+    display: flex;
+
+    @include sm {
+        flex-wrap: wrap;
+    }
+}
+
+.projects-pre {
+    width: 100%;
+    position: relative;
+    padding: 40px 30px;
+    background-color: #0c1473;
+    overflow: hidden;
+    margin-top: 45px;
+
+    @include sm {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .pat {
+        position: absolute;
+        right: -30px;
+        bottom: -10px;
+        width: 310px;
+        height: 310px;
+    }
+}
+
+.blogs-sec {
+    background-color: $back;
+    padding-top: 100px;
+    margin-top: 110px;
+}
+
+.blogs-pre {
+    margin-top: 50px;
+}

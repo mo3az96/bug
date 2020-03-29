@@ -1,0 +1,64 @@
+.service {
+    width: 100%;
+    padding: 30px;
+    border-radius: 4px;
+    cursor: default;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        background-color: $blue;
+
+        .serv-num {
+            color: $text;
+        }
+
+        .read-more {
+            color: $fff;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}
+
+.service-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.serv-num {
+    font-family: black;
+    font-size: 50px;
+    color: $line;
+    @include transition(all 0.3s ease-in-out);
+}
+
+.serv-name {
+    font-family: xbold;
+    color: $fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.serv-desc {
+    margin-bottom: 15px;
+    color: $text;
+    font-size: 16px;
+    min-height: 90px;
+}
+
+.read-more {
+    font-family: xbold;
+    color: #3842c3;
+    font-size: 14px;
+    text-transform: capitalize;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $orange;
+    }
+}
