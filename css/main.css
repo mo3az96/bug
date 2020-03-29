@@ -869,7 +869,6 @@ html[dir=rtl] header .contact-link:last-of-type {
   padding-top: 60px;
   position: relative;
   padding-bottom: 240px;
-  background-color: #050b54;
 }
 @media (max-width: 991px) {
   .main-sec {
