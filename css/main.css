@@ -1978,6 +1978,7 @@ html[dir=rtl] .menubtn.open span:nth-child(2) {
   justify-content: flex-start;
   transform-origin: left;
   transform: scaleX(0);
+  overflow-y: auto;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;

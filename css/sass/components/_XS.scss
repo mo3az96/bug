@@ -103,6 +103,7 @@
         justify-content: flex-start;
         transform-origin: left;
         transform: scaleX(0);
+        overflow-y: auto;
         @include transition(all 0.5s ease-in-out);
 
         &.open {
