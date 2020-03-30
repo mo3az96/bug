@@ -142,6 +142,10 @@
 .proj-btn {
     display: flex;
     align-items: center;
+
+    @include sm {
+        flex-direction: column;
+    }
 }
 
 .view-btn {
@@ -167,6 +171,11 @@
         background-color: #000;
         color: $fff;
 
+        @include sm {
+            margin-right: 0;
+            margin: 5px 0;
+        }
+
         span {
             font-weight: bold;
         }
@@ -175,6 +184,12 @@
     &:hover {
         color: $fff;
         background-color: $baby;
+    }
+
+    @include sm {
+        width: 250px;
+        padding: 0;
+        margin: 5px 0;
     }
 }
 

@@ -21,6 +21,20 @@ footer {
         justify-content: flex-start;
         flex-direction: column;
         margin-top: 25px;
+
+        @include sm {
+            height: 95px;
+            flex-wrap: wrap;
+        }
+    }
+
+    .nav-foot {
+        @include sm {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 145px;
+        }
     }
 
     .contact-link {
@@ -32,8 +46,14 @@ footer {
         margin: 10px 0;
         @include transition(all 0.3s ease-in-out);
 
+
+
         &:first-of-type {
             align-items: flex-start;
+
+            @include sm {
+                width: 30%;
+            }
         }
 
         span {

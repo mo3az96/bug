@@ -402,6 +402,12 @@
     padding-bottom: 100px;
     background-color: $back;
 
+    @include sm {
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
     .services {
         margin-top: 50px;
     }
@@ -457,6 +463,12 @@
     background-color: $back;
     padding-top: 100px;
     margin-top: 110px;
+
+    @include sm {
+        margin-top: 50px;
+        padding-top: 50px;
+        // padding-bottom: 50px;
+    }
 }
 
 .blogs-pre {

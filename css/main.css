@@ -229,6 +229,11 @@ html {
   display: flex;
   align-items: center;
 }
+@media (max-width: 991px) {
+  .proj-btn {
+    flex-direction: column;
+  }
+}
 
 .view-btn {
   display: flex;
@@ -255,12 +260,25 @@ html {
   background-color: #000;
   color: #fff;
 }
+@media (max-width: 991px) {
+  .view-btn:first-of-type {
+    margin-right: 0;
+    margin: 5px 0;
+  }
+}
 .view-btn:first-of-type span {
   font-weight: bold;
 }
 .view-btn:hover {
   color: #fff;
   background-color: #0166fd;
+}
+@media (max-width: 991px) {
+  .view-btn {
+    width: 250px;
+    padding: 0;
+    margin: 5px 0;
+  }
 }
 
 .custom-radio {
@@ -1247,6 +1265,13 @@ html[dir=rtl] .about-sec .image-div img {
   padding-bottom: 100px;
   background-color: #050b54;
 }
+@media (max-width: 991px) {
+  .services-sec {
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 .services-sec .services {
   margin-top: 50px;
 }
@@ -1300,6 +1325,12 @@ html[dir=rtl] .about-sec .image-div img {
   background-color: #050b54;
   padding-top: 100px;
   margin-top: 110px;
+}
+@media (max-width: 991px) {
+  .blogs-sec {
+    margin-top: 50px;
+    padding-top: 50px;
+  }
 }
 
 .blogs-pre {
@@ -1450,6 +1481,8 @@ html[dir=rtl] .about-sec .sec-headers::before {
 @media (max-width: 991px) {
   .project {
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 }
 .project .proj-img {
@@ -1482,7 +1515,7 @@ html[dir=rtl] .about-sec .sec-headers::before {
 @media (max-width: 991px) {
   .project .proj-desc {
     width: 100%;
-    padding: 0;
+    padding: 30px 0;
   }
 }
 .project .poject-name {
@@ -1731,6 +1764,20 @@ footer .contact-info {
   flex-direction: column;
   margin-top: 25px;
 }
+@media (max-width: 991px) {
+  footer .contact-info {
+    height: 95px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 991px) {
+  footer .nav-foot {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 145px;
+  }
+}
 footer .contact-link {
   display: flex;
   align-items: center;
@@ -1745,6 +1792,11 @@ footer .contact-link {
 }
 footer .contact-link:first-of-type {
   align-items: flex-start;
+}
+@media (max-width: 991px) {
+  footer .contact-link:first-of-type {
+    width: 30%;
+  }
 }
 footer .contact-link span {
   font-size: 18px;
@@ -1978,6 +2030,7 @@ html[dir=rtl] .menubtn.open span:nth-child(2) {
   transform-origin: left;
   transform: scaleX(0);
   overflow-y: auto;
+  overflow-x: hidden;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
@@ -2028,7 +2081,7 @@ html[dir=rtl] .mobile-nav .social h5 {
   align-items: center;
 }
 .mobile-nav .social-link {
-  font-size: 15px;
+  font-size: 20px;
   color: #d5d8ff;
   margin: 0 10px;
   -moz-transition: all 0.3s ease-in-out;
