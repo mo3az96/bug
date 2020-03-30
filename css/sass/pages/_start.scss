@@ -1,6 +1,10 @@
-.contact-page-cont {
+.start-page-cont {
     .content-page {
         padding: 70px 60px;
+
+        @include sm {
+            padding: 20px;
+        }
     }
 }
 
