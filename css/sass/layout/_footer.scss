@@ -23,7 +23,7 @@ footer {
         margin-top: 25px;
 
         @include sm {
-            height: 95px;
+            height: 125px;
             flex-wrap: wrap;
         }
     }
@@ -52,7 +52,7 @@ footer {
             align-items: flex-start;
 
             @include sm {
-                width: 30%;
+                width: 50%;
             }
         }
 

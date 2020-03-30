@@ -6,6 +6,7 @@
 @import 'sass/base/typography';
 
 @import 'sass/components/forms';
+@import 'sass/components/select';
 @import 'sass/components/navbar';
 @import 'sass/components/carousel';
 @import 'sass/components/accordion';
@@ -15,9 +16,11 @@
 @import 'sass/layout/breadcrumb';
 @import 'sass/pages/home';
 @import 'sass/pages/about';
+@import 'sass/pages/start';
 @import 'sass/Sections/headers';
 @import 'sass/Sections/service';
 @import 'sass/Sections/product';
 @import 'sass/Sections/blog';
+@import 'sass/Sections/content';
 @import 'sass/layout/footer';
 @import 'sass/components/XS';

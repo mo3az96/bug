@@ -47,8 +47,14 @@
     }
 }
 
+.start-page-cont {
+    @include sm {
+        text-align: center;
+    }
+}
+
 .about-sec,
-.about-page {
+.about-page-cont {
     .sec-headers {
         overflow: hidden;
 
@@ -70,6 +76,39 @@
                 @include sm {
                     transform: none;
                 }
+            }
+        }
+    }
+}
+
+.start-page-cont {
+    .sec-headers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0;
+
+            @include sm {
+                position: relative;
+                top: auto;
+            }
+        }
+
+        @include sm {
+            display: block;
+            text-align: center;
+        }
+
+        img {
+            width: 60px;
+            filter: brightness(0) invert(1);
+
+            @include sm {
+                display: none;
             }
         }
     }

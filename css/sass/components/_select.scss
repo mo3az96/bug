@@ -1,0 +1,154 @@
+.bootstrap-select {
+    &:not([class*=col-]) {
+        &:not([class*=form-control]) {
+            &:not(.input-group-btn) {
+                height: 50px;
+                width: 50%;
+                border-radius: 25px;
+                margin-bottom: 30px;
+
+                @include sm {
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.open {
+        .dropdown-toggle {
+            &.btn-default {
+                color: $fff;
+                background-color: $back;
+                border-radius: 25px;
+                outline: none !important;
+                box-shadow: none;
+                border: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $fff;
+                    background-color: $back;
+                    outline: none !important;
+                    box-shadow: none;
+                    border-color: none;
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        background-color: $back;
+        border-radius: 25px;
+        color: $fff;
+        outline: none !important;
+        box-shadow: none;
+        font-size: 16px;
+        font-family: light;
+        border: none !important;
+        text-transform: capitalize;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $fff;
+            background-color: $back;
+            outline: none !important;
+            box-shadow: none;
+            border: none;
+        }
+
+        .filter-option {
+            float: unset;
+            text-align: left;
+            padding: 0;
+
+            #{$rtl} & {
+                text-align: right;
+            }
+        }
+
+        .bs-caret {
+            .caret {
+                right: 20px;
+
+                #{$rtl} & {
+                    left: 20px;
+                    right: auto;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        display: block;
+        border: none;
+        box-shadow: none;
+        border-radius: 10px;
+        border-top: none;
+        margin: 5px 0 0;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+
+        &:focus {
+            outline: none;
+        }
+
+        &.inner {
+            li {
+                &:focus {
+                    outline: none;
+                }
+
+                &.active {
+                    a {
+                        background-color: $fff;
+                        color: $orange;
+                    }
+                }
+
+                a {
+                    transition: 0.3s;
+                    font-size: 14px;
+                    color: $blue;
+
+                    &:hover {
+                        background-color: $fff;
+                        color: $orange;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bs3 {
+    &.bootstrap-select {
+        .dropdown-toggle {
+            .filter-option {
+                padding: 0;
+                display: flex;
+                align-items: center;
+
+            }
+        }
+    }
+}

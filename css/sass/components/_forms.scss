@@ -242,6 +242,24 @@
     }
 }
 
+.submit-form {
+    width: 200px;
+    height: 60px;
+    border: none;
+    margin: auto;
+    background-color: rgba($orange, 1);
+
+    span {
+        font-size: 18px;
+        font-family: xbold;
+        text-transform: uppercase;
+    }
+
+    &::after {
+        background-color: rgba($baby, 1);
+    }
+}
+
 ////////////////////////////////////////radios
 
 .custom-radio {
@@ -448,5 +466,136 @@
 
     &:focus {
         border-color: $orange;
+    }
+}
+
+////////////////////////////////////////////
+
+.form-row {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    .input-form {
+        width: 50%;
+
+        @include sm {
+            width: 100%;
+        }
+
+        &:first-of-type {
+            margin-right: 30px;
+
+            @include sm {
+                margin-right: 0;
+            }
+
+            #{$rtl} & {
+                margin-right: 0;
+                margin-left: 30px;
+
+                @include sm {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.input-form {
+    height: 50px;
+    background-color: $back;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 20px;
+    @include transition(all 0.3s ease-in-out);
+    margin-bottom: 30px;
+
+    @include sm {
+        margin-bottom: 15px;
+    }
+
+    &:focus {
+        border-color: $orange;
+    }
+
+    &::placeholder {
+        color: $fff;
+        font-size: 16px;
+        font-family: light;
+        text-transform: capitalize;
+    }
+}
+
+.area-form {
+    width: 100%;
+    height: 250px;
+    resize: none;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+//////////////////////////////////////////////////////////////////
+.input-file {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 45px;
+    width: max-content;
+
+    .up-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+        color: $fff;
+        font-family: light;
+        border: none;
+        background-color: #1cad0d;
+        border-radius: 5px;
+        @include transition(all 0.3s ease-in-out);
+        cursor: pointer;
+
+
+
+        span {
+            color: $fff;
+            font-family: black;
+            font-size: 18px;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+    }
+
+    input[type=file] {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+
+        &:hover {
+            ~.up-btn {
+                background-color: $orange;
+            }
+        }
+    }
+
+    .file-msg {
+        font-size: 16px;
+        font-family: light;
+        margin: 0 30px;
+        color: #7b84fe;
     }
 }

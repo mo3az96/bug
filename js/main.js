@@ -10,7 +10,12 @@ $(window).on("load", function () {
     });
 });
 $(document).ready(function () {
-
+    $(".inputfile").change(function () {
+        var file = $('.inputfile')[0].files[0]
+        if (file) {
+            $(".file-msg").html(file.name)
+        }
+    });
     /////////projects Slider/////////
     $('.projects-slider').owlCarousel({
         items: 1,
@@ -84,4 +89,5 @@ $(document).ready(function () {
         $(".mobile-nav nav").removeClass("open");
         $("body").removeClass("overflow");
     });
+
 });
