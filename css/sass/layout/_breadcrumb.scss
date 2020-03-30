@@ -1,0 +1,135 @@
+.page {
+    header {
+        background-color: transparent;
+    }
+}
+
+.breadcrumb-sec {
+    position: relative;
+    padding-top: 100px;
+    position: relative;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -10vw;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-image: url(../images/bread.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        @include sm {
+            // display: none;
+        }
+    }
+
+    .shape {
+        top: 25%;
+        right: 70%;
+
+        &:nth-of-type(2) {
+            top: 50%;
+            right: 50%;
+        }
+
+        &:nth-of-type(3) {
+            top: -30%;
+            right: 85%;
+        }
+
+        &:nth-of-type(5) {
+            top: 40%;
+            right: 20%;
+        }
+
+        &:nth-of-type(4) {
+            top: -40%;
+            right: 70%;
+        }
+    }
+}
+
+
+
+ol.breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100px;
+
+
+    background-color: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    position: relative;
+
+    margin: 0;
+
+    @include xs {
+        height: 70px;
+    }
+
+}
+
+
+
+ol.breadcrumb li {
+
+    font-size: 20px;
+    font-family: bold;
+    color: #fff;
+
+    cursor: default;
+
+}
+
+
+
+ol.breadcrumb li.active {
+    font-family: bold;
+    color: $orange;
+
+}
+
+
+
+ol.breadcrumb li a {
+
+    font-size: 20px;
+    font-family: bold;
+    color: #fff;
+
+    -moz-transition: all 0.3s ease-in-out;
+
+    -o-transition: all 0.3s ease-in-out;
+
+    -webkit-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+
+ol.breadcrumb li a:hover {
+
+    color: $orange;
+
+}
+
+.breadcrumb>li+li:before {
+    content: "\e90b";
+    font-family: 'icomoon' !important;
+}

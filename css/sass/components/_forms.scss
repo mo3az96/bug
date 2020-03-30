@@ -193,6 +193,55 @@
     }
 }
 
+.btns {
+    display: flex;
+    margin-top: 40px;
+}
+
+.route-btn {
+    width: 150px;
+    height: 50px;
+    background-color: rgba($orange, 1);
+
+    span {
+        font-size: 16px;
+        font-family: bold;
+    }
+
+    &::after {
+        background-color: rgba($baby, 1);
+    }
+
+    &:last-of-type {
+        border: 2px solid $fff;
+        background-color: transparent;
+        margin-left: 15px;
+
+        @include xs {
+            margin: 0;
+            margin-top: 15px;
+        }
+
+        #{$rtl} & {
+            margin-right: 15px;
+            margin-left: 0;
+
+            @include xs {
+                margin: 0;
+                margin-top: 15px;
+            }
+        }
+
+        &::before {
+            background-color: rgba($orange, 1);
+        }
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
 ////////////////////////////////////////radios
 
 .custom-radio {

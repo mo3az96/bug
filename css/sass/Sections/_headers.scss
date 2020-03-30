@@ -47,8 +47,15 @@
     }
 }
 
-.about-sec {
+.about-sec,
+.about-page {
     .sec-headers {
+        overflow: hidden;
+
+        @include sm {
+            text-align: center;
+        }
+
         &::before {
             transform: translateX(-25px);
             display: block;

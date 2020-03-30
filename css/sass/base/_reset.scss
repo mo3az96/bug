@@ -4,6 +4,10 @@ body {
     overflow: hidden;
     background-color: #030842;
 
+    &.page {
+        background-color: $back;
+    }
+
     &::-webkit-scrollbar {
         background-color: #212993;
         width: 7px;
