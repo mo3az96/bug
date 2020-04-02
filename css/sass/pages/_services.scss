@@ -1,0 +1,26 @@
+.services-page-cont {
+    padding: 100px 0;
+
+    @include xs {
+        padding: 50px 0;
+    }
+}
+
+.services-page {
+    margin-top: 30px;
+
+    @include xs {
+        margin-top: 15px;
+    }
+
+    .service {
+        margin-top: 30px;
+        width: 100%;
+        overflow: unset;
+        border: 1px solid #2832a5;
+
+        @include xs {
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.blog-page-cont {
+    padding: 100px 0;
+
+    @include xs {
+        padding: 50px 0;
+    }
+}
+
+.blog-page {
+    margin-top: 30px;
+
+    @include xs {
+        margin-top: 15px;
+    }
+
+    .blog {
+        margin-top: 30px;
+        width: 100%;
+        overflow: unset;
+
+        @include xs {
+            margin-top: 15px;
+        }
+
+        .blog-desc {
+            border: 1px solid #2832a5;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+    }
+}

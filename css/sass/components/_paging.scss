@@ -1,0 +1,41 @@
+.mo-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+    @media (max-width:991px) {
+        margin-top: 75px;
+        justify-content: center;
+    }
+
+    li {
+        a {
+            padding: 14px;
+            height: 34px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: $fff;
+            font-size: 16px;
+            border: none;
+            margin: 0 15px;
+            @include transition(all 0.3s ease-in-out);
+
+
+
+            &.active-page {
+                background-color: $orange;
+                color: #fff;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background-color: $baby;
+                color: #fff;
+            }
+        }
+    }
+}
