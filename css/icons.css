@@ -34,6 +34,14 @@
   content: "\e900";
 }
 
+.icon-quote-left:before {
+  content: "\e919";
+}
+
+.icon-circle:before {
+  content: "\e90a";
+}
+
 .icon-comment:before {
   content: "\e901";
 }

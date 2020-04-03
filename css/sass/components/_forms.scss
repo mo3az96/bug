@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 5px 13.5px 1.5px rgba(0, 0, 0, 0.05);
     border-radius: 50px;
     overflow: hidden;
 
@@ -248,6 +249,27 @@
     border: none;
     margin: auto;
     background-color: rgba($orange, 1);
+
+    span {
+        font-size: 18px;
+        font-family: xbold;
+        text-transform: uppercase;
+    }
+
+    &::after {
+        background-color: rgba($baby, 1);
+    }
+}
+
+.post-form {
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: rgba($orange, 1);
+
+    @include xs {
+        margin: auto;
+    }
 
     span {
         font-size: 18px;

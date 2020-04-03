@@ -138,7 +138,7 @@ $(document).ready(function () {
     /////////blogs Slider/////////
     $('.blogs-slider').owlCarousel({
         items: 3,
-        margin: 30,
+        margin: 29,
         rtl: document.dir == 'rtl' ? true : false,
         dots: true,
         responsive: {
