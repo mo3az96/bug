@@ -78,3 +78,24 @@
         }
     }
 }
+
+.view-head {
+    font-family: bold;
+    display: inline-block;
+    font-size: 18px;
+    color: $fff;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $orange;
+    }
+
+    @include xs {
+        margin: auto;
+        margin-bottom: 20px;
+        text-align: center;
+        display: block;
+    }
+}

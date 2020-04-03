@@ -147,6 +147,30 @@ $(document).ready(function () {
         loop: true,
         dots: true,
     });
+    /////////work Slider/////////
+    $('.work-slider').owlCarousel({
+        items: 1,
+        margin: 30,
+        rtl: document.dir == 'rtl' ? true : false,
+        loop: true,
+        dots: true,
+    });
+    /////////work Slider/////////
+    $('.related-slider').owlCarousel({
+        items: 2,
+        margin: 30,
+        rtl: document.dir == 'rtl' ? true : false,
+        loop: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+        }
+    });
     /////////blogs Slider/////////
     $('.blogs-slider').owlCarousel({
         items: 3,

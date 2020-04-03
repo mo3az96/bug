@@ -124,3 +124,111 @@
         justify-content: center;
     }
 }
+
+.work-slider {
+    .owl-dots {
+        position: absolute;
+        right: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include sm {
+            position: relative;
+            top: auto;
+            transform: none;
+            right: auto;
+            margin-top: 25px;
+            flex-direction: row;
+        }
+
+        .owl-dot {
+            outline: none !important;
+
+            span {
+                width: 8px;
+                height: 8px;
+                background-color: $orange;
+                display: block;
+                border-radius: 8px;
+                margin: 3.5px 0;
+                @include transition(all 0.3s ease-in-out);
+
+                @include sm {
+                    margin: 0 3.5px;
+                }
+
+                &:hover {
+                    background-color: $baby;
+                }
+            }
+
+            &.active {
+                pointer-events: none;
+                cursor: default;
+
+                span {
+                    height: 25px;
+
+                    width: 6px;
+                    border-radius: 2px;
+                    background-color: $orange;
+
+                    @include sm {
+                        width: 25px;
+
+                        height: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.related-slider {
+    .owl-dots {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        @include xs {
+            display: flex;
+        }
+
+        .owl-dot {
+            outline: none !important;
+
+            span {
+                width: 8px;
+                height: 8px;
+                background-color: $orange;
+                display: block;
+                border-radius: 8px;
+                margin: 0 3.5px;
+                @include transition(all 0.3s ease-in-out);
+
+
+                &:hover {
+                    background-color: $baby;
+                }
+            }
+
+            &.active {
+                pointer-events: none;
+                cursor: default;
+
+                span {
+                    width: 25px;
+
+                    height: 6px;
+                    border-radius: 2px;
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+}

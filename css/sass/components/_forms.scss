@@ -320,6 +320,30 @@
     }
 }
 
+.details {
+    width: 170px;
+    height: 55px;
+    background-color: $more-btn;
+
+    @include sm {
+        margin: auto;
+    }
+
+    span {
+        font-size: 16px;
+        font-family: bold;
+    }
+
+    &::before,
+    &::after {
+        background-color: $baby;
+    }
+
+    &::after {
+        background-color: rgba($orange, 1);
+    }
+}
+
 ////////////////////////////////////////radios
 
 .custom-radio {
