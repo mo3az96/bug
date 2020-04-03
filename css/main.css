@@ -380,6 +380,26 @@ html[dir=rtl] .route-btn:last-of-type {
   }
 }
 
+.get-btn {
+  width: 200px;
+  height: 60px;
+  border: none;
+  background-color: #ef6c00;
+}
+@media (max-width: 767px) {
+  .get-btn {
+    margin: auto;
+  }
+}
+.get-btn span {
+  font-size: 18px;
+  font-family: xbold;
+  text-transform: uppercase;
+}
+.get-btn::after {
+  background-color: #0166fd;
+}
+
 .custom-radio {
   display: block;
   position: relative;
@@ -2502,6 +2522,101 @@ html[dir=rtl] .comments .reply-btn {
   }
 }
 
+.service-desc {
+  padding: 60px;
+  background-color: #0c1473;
+  border: 1px solid #2832a5;
+  margin-top: 60px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .service-desc {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 25px 10px;
+  }
+}
+.service-desc .service-img {
+  width: 95px;
+  height: 90px;
+  border-radius: 4px;
+  background-color: #ef6c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+}
+.service-desc .service-img img {
+  filter: brightness(0) invert(1);
+}
+.service-desc .feats {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.service-desc .feat {
+  font-size: 16px;
+  color: #fff;
+}
+.service-desc .feat::before {
+  font-family: "icomoon" !important;
+  content: "";
+  color: #ef6c00;
+  font-size: 18px;
+  margin-right: 15px;
+}
+html[dir=rtl] .service-desc .feat::before {
+  margin-right: 0;
+  margin-left: 15px;
+}
+.service-desc .get-cont {
+  position: relative;
+}
+.service-desc .arrow {
+  position: absolute;
+  right: 100%;
+  z-index: 9;
+}
+html[dir=rtl] .service-desc .arrow {
+  right: auto;
+  left: 100%;
+}
+@media (max-width: 767px) {
+  html[dir=rtl] .service-desc .arrow {
+    right: auto;
+    left: 235px;
+  }
+}
+@media (max-width: 767px) {
+  .service-desc .arrow {
+    right: 235px;
+    top: 50%;
+  }
+}
+
+.application-form {
+  padding: 60px;
+  background-color: #0c1473;
+  border: 1px solid #2832a5;
+  margin-top: 30px;
+  margin-bottom: 85px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .application-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 25px 10px;
+  }
+}
+.application-form .app-form {
+  margin-top: 70px;
+}
+@media (max-width: 767px) {
+  .application-form .app-form {
+    margin-top: 30px;
+  }
+}
+
 .sec-headers {
   color: #fff;
 }
@@ -2561,38 +2676,44 @@ html[dir=rtl] .comments .reply-btn {
 
 .about-sec .sec-headers,
 .about-page-cont .sec-headers,
-.blogs-pre .sec-headers {
+.blogs-pre .sec-headers,
+.application-form .sec-headers {
   overflow: hidden;
 }
 @media (max-width: 991px) {
   .about-sec .sec-headers,
 .about-page-cont .sec-headers,
-.blogs-pre .sec-headers {
+.blogs-pre .sec-headers,
+.application-form .sec-headers {
     text-align: center;
   }
 }
 .about-sec .sec-headers::before,
 .about-page-cont .sec-headers::before,
-.blogs-pre .sec-headers::before {
+.blogs-pre .sec-headers::before,
+.application-form .sec-headers::before {
   transform: translateX(-25px);
   display: block;
 }
 @media (max-width: 991px) {
   .about-sec .sec-headers::before,
 .about-page-cont .sec-headers::before,
-.blogs-pre .sec-headers::before {
+.blogs-pre .sec-headers::before,
+.application-form .sec-headers::before {
     transform: none;
   }
 }
 html[dir=rtl] .about-sec .sec-headers::before,
 html[dir=rtl] .about-page-cont .sec-headers::before,
-html[dir=rtl] .blogs-pre .sec-headers::before {
+html[dir=rtl] .blogs-pre .sec-headers::before,
+html[dir=rtl] .application-form .sec-headers::before {
   transform: translate(25px);
 }
 @media (max-width: 991px) {
   html[dir=rtl] .about-sec .sec-headers::before,
 html[dir=rtl] .about-page-cont .sec-headers::before,
-html[dir=rtl] .blogs-pre .sec-headers::before {
+html[dir=rtl] .blogs-pre .sec-headers::before,
+html[dir=rtl] .application-form .sec-headers::before {
     transform: none;
   }
 }
@@ -2632,6 +2753,35 @@ html[dir=rtl] .blogs-pre .sec-headers::before {
   .start-page-cont .sec-headers img,
 .contact-page-cont .sec-headers img {
     display: none;
+  }
+}
+
+.service-desc .sec-headers {
+  text-align: center;
+}
+.service-desc .sec-headers::before {
+  display: none;
+}
+
+.text-headers .maintext {
+  font-family: bold;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .text-headers .maintext {
+    text-align: center;
+  }
+}
+.text-headers .sec-text {
+  font-size: 16px;
+  color: #9fa5f2;
+  font-family: tajwal;
+}
+@media (max-width: 767px) {
+  .text-headers .sec-text {
+    text-align: center;
   }
 }
 

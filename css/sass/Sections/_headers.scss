@@ -57,7 +57,8 @@
 
 .about-sec,
 .about-page-cont,
-.blogs-pre {
+.blogs-pre,
+.application-form {
     .sec-headers {
         overflow: hidden;
 
@@ -114,6 +115,41 @@
             @include sm {
                 display: none;
             }
+        }
+    }
+}
+
+.service-desc {
+    .sec-headers {
+
+        text-align: center;
+
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.text-headers {
+    .maintext {
+        font-family: bold;
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 40px;
+
+        @include xs {
+            text-align: center;
+        }
+    }
+
+    .sec-text {
+        font-size: 16px;
+        color: #9fa5f2;
+        font-family: tajwal;
+
+        @include xs {
+            text-align: center;
         }
     }
 }

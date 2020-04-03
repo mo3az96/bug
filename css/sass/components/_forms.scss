@@ -297,6 +297,29 @@
     }
 }
 
+
+
+.get-btn {
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: rgba($orange, 1);
+
+    @include xs {
+        margin: auto;
+    }
+
+    span {
+        font-size: 18px;
+        font-family: xbold;
+        text-transform: uppercase;
+    }
+
+    &::after {
+        background-color: rgba($baby, 1);
+    }
+}
+
 ////////////////////////////////////////radios
 
 .custom-radio {
