@@ -1161,6 +1161,9 @@ html[dir=rtl] .nav-li {
   .howdoit {
     margin-bottom: 30px;
   }
+  .howdoit .item {
+    padding: 0;
+  }
 }
 
 .loader {

@@ -279,5 +279,9 @@
 
     @include sm {
         margin-bottom: 30px;
+
+        .item {
+            padding: 0;
+        }
     }
 }
