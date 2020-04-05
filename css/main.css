@@ -3551,7 +3551,7 @@ footer .contact-info {
 }
 @media (max-width: 991px) {
   footer .contact-info {
-    height: 85px;
+    height: 95px;
     flex-wrap: wrap;
   }
 }
