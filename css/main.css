@@ -167,9 +167,21 @@ html {
   height: 50px;
   background-color: #0166fd;
 }
+@media (max-width: 991px) {
+  .free {
+    width: 130px;
+    height: 40px;
+  }
+}
 .free span {
   font-size: 16px;
   font-family: bold;
+}
+@media (max-width: 991px) {
+  .free span {
+    font-size: 14px;
+    font-family: tajwal;
+  }
 }
 .free::after {
   background-color: #ef6c00;
@@ -896,7 +908,7 @@ html[dir=rtl] .nav-li {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.navlink:hover {
+.navlink:hover, .navlink:focus {
   color: #ef6c00;
 }
 .navlink.navactive {
@@ -1645,7 +1657,7 @@ html[dir=rtl] .image-div img {
     flex-direction: column;
   }
   .btns .start-btn {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
 }
 
@@ -3837,7 +3849,8 @@ html[dir=rtl] .menubtn.open span:nth-child(2) {
 .mobile-nav nav {
   flex-direction: column;
   margin: 0;
-  background-color: #050b55;
+  background-color: #0b126c;
+  padding-bottom: 25px;
   width: 300px;
   position: absolute;
   top: 0;
@@ -3863,15 +3876,51 @@ html[dir=rtl] .menubtn.open span:nth-child(2) {
   justify-content: flex-start;
 }
 .mobile-nav .nav-li {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #fff;
+  display: block;
+  line-height: 50px;
   width: 100%;
-  padding: 0 25px;
+  padding: 0 0;
+}
+.mobile-nav .mo-accordion {
+  justify-content: space-between;
+  display: flex !important;
+  align-items: center;
+}
+.mobile-nav .mo-accordion::after {
+  content: "";
+  font-family: "icomoon" !important;
+  font-size: 10px;
+}
+.mobile-nav .mo-accordion.active {
+  background-color: #131e88;
+  color: #fff;
+}
+.mobile-nav .mo-accordion.active::after {
+  transform: rotate(180deg);
+}
+.mobile-nav .mo-panel {
+  background-color: #131e88;
+  max-height: 0;
+  overflow: hidden;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.mobile-nav .mo-panel .navlink {
+  font-size: 16px;
+  padding: 0 40px;
+}
+.mobile-nav .mo-panel .navlink img {
+  width: 25px;
+  filter: brightness(0) invert(1);
 }
 .mobile-nav .navlink {
   font-size: 20px;
+  padding: 0 25px;
+  width: 100%;
+  display: block;
+  border-bottom: 0.5px solid #1c2486;
 }
 .mobile-nav .nav-foot {
   margin-top: 25px;
@@ -3898,9 +3947,9 @@ html[dir=rtl] .mobile-nav .social h5 {
   align-items: center;
 }
 .mobile-nav .social-link {
-  font-size: 20px;
+  font-size: 16px;
   color: #d5d8ff;
-  margin: 0 10px;
+  margin: 0 5px;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -3941,6 +3990,8 @@ html[dir=rtl] .mobile-nav .contact-link span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #050b55;
+  border-bottom: 0.5px solid #1c2486;
 }
 .mobile-nav .nav-head .logo {
   width: 40px;

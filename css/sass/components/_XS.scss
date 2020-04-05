@@ -94,7 +94,8 @@
     nav {
         flex-direction: column;
         margin: 0;
-        background-color: #050b55;
+        background-color: #0b126c;
+        padding-bottom: 25px;
         width: 300px;
         position: absolute;
         top: 0;
@@ -120,16 +121,61 @@
     }
 
     .nav-li {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid $fff;
+        display: block;
+        line-height: 50px;
+
         width: 100%;
-        padding: 0 25px;
+        padding: 0 0;
+
+    }
+
+    .mo-accordion {
+        justify-content: space-between;
+        display: flex !important;
+        align-items: center;
+
+        &::after {
+            content: "\e90f";
+            font-family: 'icomoon' !important;
+            font-size: 10px;
+        }
+
+        &.active {
+            background-color: #131e88;
+            color: #fff;
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .mo-panel {
+        background-color: #131e88;
+        max-height: 0;
+        overflow: hidden;
+        @include transition(all 0.3s ease-in-out);
+
+        .navlink {
+            font-size: 16px;
+            padding: 0 40px;
+
+            img {
+                width: 25px;
+                filter: brightness(0) invert(1);
+            }
+
+        }
     }
 
     .navlink {
         font-size: 20px;
+        padding: 0 25px;
+        width: 100%;
+        display: block;
+        border-bottom: 0.5px solid #1c2486;
+
+
     }
 
     .nav-foot {
@@ -162,9 +208,9 @@
     }
 
     .social-link {
-        font-size: 20px;
+        font-size: 16px;
         color: $links;
-        margin: 0 10px;
+        margin: 0 5px;
         @include transition(all 0.3s ease-in-out);
 
         &:hover {
@@ -206,6 +252,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: #050b55;
+        border-bottom: 0.5px solid #1c2486;
 
         .logo {
             width: 40px;

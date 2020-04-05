@@ -252,6 +252,16 @@ $(document).ready(function () {
         $(".mobile-nav nav").removeClass("open");
         $("body").removeClass("overflow");
     });
-
+    $('.mo-accordion').click(function () {
+        var x = $(this).siblings().prop('scrollHeight') + 12 + "px";
+        $(".mo-accordion").not(this).removeClass("active");
+        $(this).toggleClass("active");
+        if ($(this).siblings().css('max-height') == '0px') {
+            $(this).siblings().css('max-height', x);
+        } else {
+            $(this).siblings().css('max-height', '0');
+        }
+        $(".mo-accordion").not(this).siblings().css('max-height', '0');
+    })
 });
 
