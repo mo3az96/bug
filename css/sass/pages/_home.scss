@@ -315,6 +315,11 @@
         position: absolute;
         top: -30px;
         right: 20px;
+
+        @include xs {
+            right: 0;
+            top: 0;
+        }
     }
 
     .item-clip {

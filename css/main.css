@@ -1412,7 +1412,7 @@ html[dir=rtl] header .contact-link:last-of-type {
 
 .breadcrumb-sec {
   position: relative;
-  padding-top: 100px;
+  padding-top: 80px;
   position: relative;
   padding-bottom: 100px;
   text-transform: uppercase;
@@ -1805,6 +1805,12 @@ html[dir=rtl] .play-video-cont {
   position: absolute;
   top: -30px;
   right: 20px;
+}
+@media (max-width: 767px) {
+  .howdoit .num {
+    right: 0;
+    top: 0;
+  }
 }
 .howdoit .item-clip {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
