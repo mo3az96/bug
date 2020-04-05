@@ -10,8 +10,8 @@
     padding-bottom: 240px;
 
     @include sm {
-        padding: 40px 0;
-        background-color: $back;
+        padding: 40px 0 60px;
+        // background-color: $back;
     }
 
     &::before {
@@ -28,7 +28,7 @@
         background-position: bottom;
 
         @include sm {
-            display: none;
+            left: -100%;
         }
     }
 

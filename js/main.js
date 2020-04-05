@@ -204,6 +204,8 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 2,
+                // stagePadding: 200,
+                loop: true,
             },
             768: {
                 items: 3,

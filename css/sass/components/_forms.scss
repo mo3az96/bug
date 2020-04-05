@@ -498,6 +498,10 @@
     position: relative;
     width: 100%;
     height: 40px;
+
+    @include sm {
+        width: 80%;
+    }
 }
 
 .newsletter-button {

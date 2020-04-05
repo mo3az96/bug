@@ -13,6 +13,10 @@ footer {
 
     .logo {
         width: 68px;
+
+        @include sm {
+            margin: auto;
+        }
     }
 
     .contact-info {
@@ -23,7 +27,7 @@ footer {
         margin-top: 25px;
 
         @include sm {
-            height: 125px;
+            height: 85px;
             flex-wrap: wrap;
         }
     }
@@ -156,6 +160,10 @@ footer {
         color: $fff;
         display: block;
         margin-bottom: 15px;
+
+        @include sm {
+            width: 80%;
+        }
     }
 
     .social-ul {
@@ -197,7 +205,7 @@ footer {
         @include sm {
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             text-align: center;
         }
 
