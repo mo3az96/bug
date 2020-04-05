@@ -132,6 +132,12 @@ $(document).ready(function () {
             'scrollTop': $target.offset().top - 60
         }, 1000, 'swing');
     });
+    $(".get-btn").click(function (e) {
+        e.preventDefault();
+        $(".arrow").slideDown(200, function () {
+            $('.application-form').slideDown("300")
+        });
+    });
     ////////////////////////////////////////////////////////////////////
     $(".inputfile").change(function () {
         var file = $('.inputfile')[0].files[0]
@@ -216,6 +222,14 @@ $(document).ready(function () {
         $(".mobile-nav").remove();
     } else {
         $(".sec-header").remove();
+        $('.howdoit .items').addClass("owl-carousel")
+        /////////parts Slider/////////
+        $('.howdoit .items').owlCarousel({
+            items: 1,
+            margin: 30,
+            rtl: document.dir == 'rtl' ? true : false,
+            dots: true,
+        });
     }
 
     $('.menubtn').click(function () {

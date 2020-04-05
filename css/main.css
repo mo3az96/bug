@@ -857,6 +857,10 @@ html[dir=rtl] .bootstrap-select .dropdown-toggle .bs-caret .caret {
   align-items: center;
 }
 
+.contact-form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100%;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -1112,6 +1116,51 @@ html[dir=rtl] .nav-li {
   height: 6px;
   border-radius: 2px;
   background-color: #ef6c00;
+}
+
+.howdoit .owl-dots {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+@media (max-width: 767px) {
+  .howdoit .owl-dots {
+    display: flex;
+  }
+}
+.howdoit .owl-dots .owl-dot {
+  outline: none !important;
+}
+.howdoit .owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+  background-color: #ef6c00;
+  display: block;
+  border-radius: 8px;
+  margin: 0 3.5px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.howdoit .owl-dots .owl-dot span:hover {
+  background-color: #0166fd;
+}
+.howdoit .owl-dots .owl-dot.active {
+  pointer-events: none;
+  cursor: default;
+}
+.howdoit .owl-dots .owl-dot.active span {
+  width: 25px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #ef6c00;
+}
+@media (max-width: 991px) {
+  .howdoit {
+    margin-bottom: 30px;
+  }
 }
 
 .loader {
@@ -1663,6 +1712,7 @@ html[dir=rtl] .play-video-cont {
     flex-direction: column;
     transform: none !important;
     margin-top: 30px;
+    display: block;
   }
 }
 .howdoit .item {
@@ -1673,7 +1723,6 @@ html[dir=rtl] .play-video-cont {
 @media (max-width: 991px) {
   .howdoit .item {
     margin: auto;
-    margin-bottom: 20px;
     width: auto;
     position: relative;
     transform: none;
@@ -1755,6 +1804,7 @@ html[dir=rtl] .play-video-cont {
   right: 20px;
 }
 .howdoit .item-clip {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background-color: #0c1473;
   overflow: hidden;
@@ -2649,6 +2699,7 @@ html[dir=rtl] .comments .reply-btn {
   border: 1px solid #2832a5;
   margin-top: 60px;
   position: relative;
+  margin-bottom: 30px;
 }
 @media (max-width: 767px) {
   .service-desc {
@@ -2696,6 +2747,7 @@ html[dir=rtl] .service-desc .feat::before {
   position: absolute;
   right: 100%;
   z-index: 9;
+  display: none;
 }
 html[dir=rtl] .service-desc .arrow {
   right: auto;
@@ -2718,13 +2770,12 @@ html[dir=rtl] .service-desc .arrow {
   padding: 60px;
   background-color: #0c1473;
   border: 1px solid #2832a5;
-  margin-top: 30px;
   margin-bottom: 85px;
   position: relative;
+  display: none;
 }
 @media (max-width: 767px) {
   .application-form {
-    margin-top: 50px;
     margin-bottom: 50px;
     padding: 25px 10px;
   }
@@ -2754,7 +2805,7 @@ html[dir=rtl] .service-desc .arrow {
 }
 
 .work-desc {
-  padding: 80px 0;
+  padding: 80px 60px;
   background-color: #0c1473;
   border: 1px solid #2832a5;
   margin-top: 60px;
@@ -2765,7 +2816,7 @@ html[dir=rtl] .service-desc .arrow {
 }
 @media (max-width: 767px) {
   .work-desc {
-    padding: 30px 0;
+    padding: 20px 10px;
     margin-top: 30px;
     margin-bottom: 45px;
   }
@@ -2881,6 +2932,15 @@ html[dir=rtl] .service-desc .arrow {
 }
 .related-slider .project .proj-desc .poject-info {
   margin-bottom: 20px;
+}
+
+.service-desc .first-sec {
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .service-desc .first-sec {
+    margin: 0;
+  }
 }
 
 .sec-headers {

@@ -232,3 +232,52 @@
         }
     }
 }
+
+.howdoit {
+    .owl-dots {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        @include xs {
+            display: flex;
+        }
+
+        .owl-dot {
+            outline: none !important;
+
+            span {
+                width: 8px;
+                height: 8px;
+                background-color: $orange;
+                display: block;
+                border-radius: 8px;
+                margin: 0 3.5px;
+                @include transition(all 0.3s ease-in-out);
+
+
+                &:hover {
+                    background-color: $baby;
+                }
+            }
+
+            &.active {
+                pointer-events: none;
+                cursor: default;
+
+                span {
+                    width: 25px;
+
+                    height: 6px;
+                    border-radius: 2px;
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+
+    @include sm {
+        margin-bottom: 30px;
+    }
+}

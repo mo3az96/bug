@@ -520,6 +520,7 @@
     border: 1px solid #2832a5;
     margin-top: 60px;
     position: relative;
+    margin-bottom: 30px;
 
     @include xs {
         margin-top: 50px;
@@ -573,6 +574,7 @@
         position: absolute;
         right: 100%;
         z-index: 9;
+        display: none;
 
         #{$rtl} & {
             right: auto;
@@ -595,12 +597,13 @@
     padding: 60px;
     background-color: #0c1473;
     border: 1px solid #2832a5;
-    margin-top: 30px;
+
     margin-bottom: 85px;
     position: relative;
+    display: none;
 
     @include xs {
-        margin-top: 50px;
+
         margin-bottom: 50px;
         padding: 25px 10px;
     }
@@ -634,7 +637,7 @@
 }
 
 .work-desc {
-    padding: 80px 0;
+    padding: 80px 60px;
     background-color: #0c1473;
     border: 1px solid #2832a5;
     margin-top: 60px;
@@ -644,7 +647,7 @@
     overflow: hidden;
 
     @include xs {
-        padding: 30px 0;
+        padding: 20px 10px;
         margin-top: 30px;
         margin-bottom: 45px;
     }
@@ -764,6 +767,16 @@
             .poject-info {
                 margin-bottom: 20px;
             }
+        }
+    }
+}
+
+.service-desc {
+    .first-sec {
+        margin-top: 40px;
+
+        @include xs {
+            margin: 0;
         }
     }
 }
