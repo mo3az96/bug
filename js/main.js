@@ -134,9 +134,9 @@ $(document).ready(function () {
     });
     $(".get-btn").click(function (e) {
         e.preventDefault();
-        $(".arrow").slideDown(200, function () {
-            $('.application-form').slideDown("300")
-        });
+
+        $('.application-form').slideDown("300")
+
     });
     ////////////////////////////////////////////////////////////////////
     $(".inputfile").change(function () {
