@@ -433,95 +433,83 @@ html[dir=rtl] .route-btn:last-of-type {
   background-color: #ef6c00;
 }
 
-.custom-radio {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-weight: unset;
-  margin: 0;
+.nav-tabs {
+  border-bottom: none;
+}
+.nav-tabs li {
   margin-right: 30px;
   width: 210px;
   height: 185px;
 }
-html[dir=rtl] .custom-radio {
+html[dir=rtl] .nav-tabs li {
   margin-right: 0;
   margin-left: 30px;
 }
 @media (max-width: 991px) {
-  html[dir=rtl] .custom-radio {
+  html[dir=rtl] .nav-tabs li {
     margin-right: 0;
     margin-left: 15px;
   }
 }
 @media (max-width: 991px) {
-  .custom-radio {
+  .nav-tabs li {
     width: calc(50% - 7.5px);
     margin-right: 15px;
     margin-bottom: 15px;
     height: 150px;
   }
-  .custom-radio:nth-of-type(3), .custom-radio:nth-of-type(5) {
+  .nav-tabs li:nth-of-type(3), .nav-tabs li:nth-of-type(5) {
     margin-right: 0;
   }
-  .custom-radio:first-of-type {
+  .nav-tabs li:first-of-type {
     width: 100%;
     margin: 0 0 15px;
   }
 }
-.custom-radio:last-of-type {
+.nav-tabs li:last-of-type {
   margin-right: 0;
 }
-html[dir=rtl] .custom-radio:last-of-type {
+html[dir=rtl] .nav-tabs li:last-of-type {
   margin-right: 0;
   margin-left: 0;
 }
-.custom-radio input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.custom-radio input:checked ~ .checkmark {
+.nav-tabs li.active .tab-link {
+  pointer-events: none;
   background-image: -webkit-gradient(linear, left top, right top, from(#e65f06), color-stop(#e69006), color-stop(#e69006), to(#e65f06));
   background-image: -o-linear-gradient(left, #e65f06, #e69006, #e69006, #e65f06);
   background-image: linear-gradient(to right, #e65f06, #e69006, #e69006, #e65f06);
   background-size: 200%;
+  border: none;
 }
-.custom-radio input:checked ~ .checkmark:after {
+.nav-tabs li.active .tab-link:after {
   color: #e67806;
   opacity: 1;
   visibility: visible;
 }
-.custom-radio input:checked ~ .checkmark .work-img {
+.nav-tabs li.active .tab-link .work-img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(176deg) brightness(104%) contrast(101%);
 }
-.custom-radio input:checked ~ .checkmark .work-name {
+.nav-tabs li.active .tab-link .work-name {
   color: #fff;
 }
-.custom-radio .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.nav-tabs .tab-link {
+  margin: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
-  background-color: #0c1473;
+  background: #0c1473;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: none !important;
+  position: relative;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
 }
-.custom-radio .checkmark:after {
+.nav-tabs .tab-link:after {
   position: absolute;
   content: "";
   top: 100%;
@@ -537,11 +525,11 @@ html[dir=rtl] .custom-radio:last-of-type {
   border-width: 20px;
 }
 @media (max-width: 991px) {
-  .custom-radio .checkmark:after {
+  .nav-tabs .tab-link:after {
     display: none;
   }
 }
-.custom-radio .work-img {
+.nav-tabs .tab-link .work-img {
   width: 50px;
   height: 50px;
   margin-bottom: 20px;
@@ -551,7 +539,7 @@ html[dir=rtl] .custom-radio:last-of-type {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.custom-radio .work-name {
+.nav-tabs .tab-link .work-name {
   font-family: bold;
   font-size: 20px;
   color: #4c57da;
@@ -560,13 +548,13 @@ html[dir=rtl] .custom-radio:last-of-type {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.custom-radio:hover input ~ .checkmark {
-  background-color: #ef6c00;
+.nav-tabs .tab-link:hover {
+  background: #ef6c00;
 }
-.custom-radio:hover input ~ .checkmark .work-img {
+.nav-tabs .tab-link:hover .work-img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(176deg) brightness(104%) contrast(101%);
 }
-.custom-radio:hover input ~ .checkmark .work-name {
+.nav-tabs .tab-link:hover .work-name {
   color: #fff;
 }
 
@@ -1936,12 +1924,12 @@ html[dir=rtl] .about-sec .image-div img {
   right: 90%;
 }
 
-.radios {
+.nav-tabs {
   margin-top: 50px;
   display: flex;
 }
 @media (max-width: 991px) {
-  .radios {
+  .nav-tabs {
     flex-wrap: wrap;
   }
 }
@@ -3724,6 +3712,17 @@ footer .last-footer {
   }
 }
 footer .last-footer span {
+  color: #ef6c00;
+}
+
+.copytight a {
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.copytight a:hover {
   color: #ef6c00;
 }
 

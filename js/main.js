@@ -263,5 +263,11 @@ $(document).ready(function () {
         }
         $(".mo-accordion").not(this).siblings().css('max-height', '0');
     })
+
+
+    $(".nav-tabs .tab-link").on("shown.bs.tab", function (e) {
+        let $owl = $(".tab-content .owl-carousel");
+        $owl.trigger("refresh.owl.carousel");
+    });
 });
 
