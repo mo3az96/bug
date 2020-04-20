@@ -4000,4 +4000,149 @@ html[dir=rtl] .mobile-nav .contact-link span {
   background-color: transparent;
 }
 
+.page-eror {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.page-eror .msg {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  color: rgba(255, 255, 255, 0.03);
+  font-size: 25vw;
+  font-family: black;
+  line-height: 0.5;
+}
+.page-eror .info {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  color: #fff;
+  font-size: 50px;
+  font-family: black;
+  line-height: 0.5;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .page-eror .info {
+    font-size: 35px;
+  }
+}
+
+.ere-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.ere-logo .logo {
+  -webkit-animation: ghost 1.5s ease-in-out alternate infinite;
+  animation: ghost 1.5s ease-in-out alternate infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  font-family: "black";
+  color: #fff;
+}
+.ere-logo .logo img {
+  width: 150px;
+}
+.ere-logo .shadow {
+  width: 140px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  margin: 200px auto;
+  left: 0;
+  right: 0;
+  -webkit-animation: shadow 1.5s ease-in-out alternate infinite;
+  animation: shadow 1.5s ease-in-out alternate infinite;
+}
+
+.back {
+  font-size: 20px;
+  top: 50px;
+  left: 50px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d5d8ff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.back:hover {
+  color: #fff;
+  border-color: #ef6c00;
+}
+@media (max-width: 767px) {
+  .back {
+    left: 25px;
+  }
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-transform: scale(1) translateY(0px);
+    transform: scale(1) translateY(0px);
+  }
+  100% {
+    -webkit-transform: scale(0.8) translateY(50px);
+    transform: scale(0.8) translateY(50px);
+  }
+}
+@keyframes shadow {
+  0% {
+    -webkit-transform: scale(1) translateY(0px);
+    transform: scale(1) translateY(0px);
+  }
+  100% {
+    -webkit-transform: scale(0.8) translateY(50px);
+    transform: scale(0.8) translateY(50px);
+  }
+}
+@-webkit-keyframes ghost {
+  0% {
+    -webkit-transform: scale(1) translateY(0px);
+    transform: scale(1) translateY(0px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-40px);
+    transform: scale(1) translateY(-40px);
+  }
+}
+@keyframes ghost {
+  0% {
+    -webkit-transform: scale(1) translateY(0px);
+    transform: scale(1) translateY(0px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-40px);
+    transform: scale(1) translateY(-40px);
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
